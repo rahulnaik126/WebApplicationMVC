@@ -1604,11 +1604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\P10491081\\OneDrive - Capita Plc\\Rahul\\Projects\\Azure\\Certifications\\WebApplicationMVC\\WebApplicationMVC\\WebApplicationMVC.csproj",
+      "projectUniqueName": "C:\\Users\\P10491081\\OneDrive - Capita Plc\\Rahul\\Projects\\Azure\\Certifications\\WebApplicationMVCGitHub\\WebApplicationMVC\\WebApplicationMVC\\WebApplicationMVC.csproj",
       "projectName": "WebApplicationMVC",
-      "projectPath": "C:\\Users\\P10491081\\OneDrive - Capita Plc\\Rahul\\Projects\\Azure\\Certifications\\WebApplicationMVC\\WebApplicationMVC\\WebApplicationMVC.csproj",
+      "projectPath": "C:\\Users\\P10491081\\OneDrive - Capita Plc\\Rahul\\Projects\\Azure\\Certifications\\WebApplicationMVCGitHub\\WebApplicationMVC\\WebApplicationMVC\\WebApplicationMVC.csproj",
       "packagesPath": "C:\\Users\\P10491081\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\P10491081\\OneDrive - Capita Plc\\Rahul\\Projects\\Azure\\Certifications\\WebApplicationMVC\\WebApplicationMVC\\obj\\",
+      "outputPath": "C:\\Users\\P10491081\\OneDrive - Capita Plc\\Rahul\\Projects\\Azure\\Certifications\\WebApplicationMVCGitHub\\WebApplicationMVC\\WebApplicationMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
