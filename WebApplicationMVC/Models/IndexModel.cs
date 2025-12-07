@@ -6,18 +6,27 @@ namespace WebApplicationMVC.Models
 {
     public class IndexModel
     {
+        private IConfiguration _configuration;
+
         public List<Course> Courses = new List<Course>();
+
+        public IndexModel(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         public List<Course> GetCourses()
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddEnvironmentVariables();
-            IConfiguration _configuration = builder.Build();
+            //var builder = new ConfigurationBuilder()
+            //    .SetBasePath(AppContext.BaseDirectory)
+            //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            //    .AddEnvironmentVariables();
+            //IConfiguration _configuration = builder.Build();
+
+            var config = _configuration.GetSection("Common:Settings");
 
 
-            string connectionString = _configuration.GetConnectionString("DBConnection")!;
+            string? connectionString = config.GetValue<string>("DBConnectionString");
 
             if (string.IsNullOrEmpty(connectionString))
             {
