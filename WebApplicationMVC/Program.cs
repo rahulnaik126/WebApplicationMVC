@@ -1,9 +1,19 @@
+using Microsoft.FeatureManagement;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Configuration.AddAzureAppConfiguration("Endpoint=https://webapplicationconfig.azconfig.io;Id=8rs5;Secret=F99YSJHv8ELjdPjZWxjMPrDQJ2SK0DGqVWrVKIFN4fdaKjOAPeNBJQQJ99BLACmepeScsAOxAAABAZAC3xvi");
+builder.Configuration.AddAzureAppConfiguration(
+    options =>
+    {
+        options.Connect("Endpoint=https://webapplicationconfig.azconfig.io;Id=8rs5;Secret=F99YSJHv8ELjdPjZWxjMPrDQJ2SK0DGqVWrVKIFN4fdaKjOAPeNBJQQJ99BLACmepeScsAOxAAABAZAC3xvi");
+        options.UseFeatureFlags();
+    }
+);
+
+builder.Services.AddFeatureManagement();
 
 var app = builder.Build();
 
